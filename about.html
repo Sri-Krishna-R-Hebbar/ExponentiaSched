@@ -14,8 +14,38 @@
 
   <main class="p-6 max-w-2xl mx-auto">
     <section>
-      <h2 class="text-xl font-semibold">Algorithm Explanation</h2>
-      <p class="mt-4">EAD Scheduling prioritizes processes using exponential aging...</p>
+      <h2 class="text-xl font-semibold">What is CPU Scheduling?</h2>
+      <p class="mt-4">
+        CPU scheduling is the process of determining which process in the ready queue should be given access to the CPU for execution. The goal of CPU scheduling is to maximize CPU utilization and system efficiency while ensuring that processes are handled in a fair and timely manner. Various scheduling algorithms are used to achieve this, each with its own approach to handling process execution based on different factors such as arrival time, burst time, priority, and deadlines.
+      </p>
+    </section>
+
+    <section class="mt-6">
+      <h2 class="text-xl font-semibold">Key Scheduling Metrics</h2>
+      <ul class="list-disc pl-6 mt-4">
+        <li><strong>Throughput:</strong> Throughput refers to the number of processes completed in a given time period. A higher throughput indicates that the system is processing more tasks, which is typically a sign of efficient scheduling.</li>
+        <li><strong>Average Waiting Time:</strong> This is the average amount of time that a process spends waiting in the ready queue before it gets executed by the CPU. Minimizing waiting time helps improve overall system performance and responsiveness.</li>
+        <li><strong>Average Turnaround Time:</strong> The average turnaround time is the total time taken for a process to complete from the moment it arrives in the system until it finishes execution. This includes both waiting time and burst time (the time the process spends executing on the CPU).</li>
+        <li><strong>Total Burst Time:</strong> This refers to the total CPU time required by all processes to complete their execution. It is the sum of the burst times of individual processes and is crucial for determining the overall workload managed by the system.</li>
+      </ul>
+    </section>
+
+    <section class="mt-6">
+      <h2 class="text-xl font-semibold">Scheduling Algorithms</h2>
+      <h3 class="mt-4 font-semibold">1. Exponential Aging Deadline Scheduling (EAD)</h3>
+      <p>
+        EAD is a scheduling algorithm that prioritizes processes with deadlines that "age" over time. As a process nears its deadline, its priority increases exponentially, making it more likely to be scheduled for execution. This method helps ensure that processes with critical deadlines are given higher priority, improving system responsiveness for time-sensitive tasks.
+      </p>
+      
+      <h3 class="mt-4 font-semibold">2. First-Come, First-Served (FCFS)</h3>
+      <p>
+        FCFS is the simplest scheduling algorithm, where processes are executed in the order they arrive in the ready queue. While easy to implement, FCFS can suffer from long waiting times, especially if shorter processes arrive after longer ones. This algorithm does not consider the burst times of processes, which can lead to inefficient CPU utilization.
+      </p>
+      
+      <h3 class="mt-4 font-semibold">3. Shortest Job First (SJF)</h3>
+      <p>
+        SJF is a non-preemptive scheduling algorithm that selects the process with the shortest burst time first. This method helps minimize waiting time and can improve throughput. However, it requires knowledge of the burst times in advance and may lead to the "starvation" of longer processes if shorter ones continue to arrive.
+      </p>
     </section>
   </main>
 

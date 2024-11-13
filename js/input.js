@@ -16,7 +16,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       const processIdInput = document.createElement('input');
       processIdInput.type = 'text';
       processIdInput.name = `processId_${i}`;
-      processIdInput.classList.add('mt-1', 'block', 'w-full');
+      processIdInput.classList.add('mt-1', 'block', 'w-full','text-black');
       processIdInput.required = true;
       processIdLabel.appendChild(processIdInput);
       fieldset.appendChild(processIdLabel);
@@ -27,7 +27,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       const burstTimeInput = document.createElement('input');
       burstTimeInput.type = 'number';
       burstTimeInput.name = `burstTime_${i}`;
-      burstTimeInput.classList.add('mt-1', 'block', 'w-full');
+      burstTimeInput.classList.add('mt-1', 'block', 'w-full','text-black');
       burstTimeInput.required = true;
       burstTimeInput.min = 1;
       burstTimeLabel.appendChild(burstTimeInput);
@@ -39,7 +39,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       const arrivalTimeInput = document.createElement('input');
       arrivalTimeInput.type = 'number';
       arrivalTimeInput.name = `arrivalTime_${i}`;
-      arrivalTimeInput.classList.add('mt-1', 'block', 'w-full');
+      arrivalTimeInput.classList.add('mt-1', 'block', 'w-full','text-black');
       arrivalTimeInput.required = true;
       arrivalTimeInput.min = 0;
       arrivalTimeLabel.appendChild(arrivalTimeInput);
@@ -51,7 +51,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       const deadlineInput = document.createElement('input');
       deadlineInput.type = 'number';
       deadlineInput.name = `deadline_${i}`;
-      deadlineInput.classList.add('mt-1', 'block', 'w-full');
+      deadlineInput.classList.add('mt-1', 'block', 'w-full','text-black');
       deadlineInput.required = true;
       deadlineInput.min = 1;
       deadlineLabel.appendChild(deadlineInput);
