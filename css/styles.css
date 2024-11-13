@@ -54,10 +54,32 @@ nav ul li a:hover {
   margin: 0 auto; /* Center the pie chart */
 }
 .hero {
-  background: linear-gradient(to right, rgba(75, 0, 130, 0.8), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') no-repeat center center/cover;
+  position: relative;
+  height: 400px; /* Set a fixed height for the hero section */
+  overflow: hidden;
   color: white;
-  padding: 100px 20px; /* Increased padding for a larger hero section */
   text-align: center;
+}
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 12s infinite; /* Rotate every 12 seconds */
+  z-index: 0;
+}
+@keyframes rotate {
+  0% { background-color: rgba(75, 0, 130, 0.8); }
+  25% { background-color: rgba(0, 0, 0, 0.5); }
+  50% { background-color: rgba(0, 0, 128, 0.8); }
+  75% { background-color: rgba(0, 0, 0, 0.5); }
+  100% { background-color: rgba(75, 0, 130, 0.8); }
+}
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+  padding: 100px 20px; /* Increased padding for a larger hero section */
 }
 .card-container {
   display: grid;
@@ -72,4 +94,7 @@ nav ul li a:hover {
   text-align: center;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.head{
+  font-size: 35px;
 }
