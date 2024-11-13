@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add this to your CSS file */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ensure a consistent font */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for horizontal alignment */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    margin-left: 1rem; /* Add space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link color */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#ganttChart {
+  width: 100%; /* Ensure it takes full width */
+  height: 200px; /* Set a fixed height */
+}
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+.chart {
+  flex: 1; /* Each chart takes equal space */
+  margin: 0 10px; /* Add some margin between charts */
+  min-width: 250px; /* Minimum width for responsiveness */
+}
+#effectivenessChart {
+  max-width: 400px; /* Set a maximum width for the pie chart */
+  margin: 0 auto; /* Center the pie chart */
+}
+.hero {
+  background: linear-gradient(to right, rgba(75, 0, 130, 0.8), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px; /* Increased padding for a larger hero section */
+  text-align: center;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

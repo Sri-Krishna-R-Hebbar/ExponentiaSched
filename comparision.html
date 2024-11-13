@@ -5,25 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparison - CPU Scheduling Algorithms</title>
   <link href="./css/output.css" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-900 text-white">
 
-  <header class="p-6 text-white text-center bg-gradient-to-br from-purple-600 to-blue-500">
-    <h1 class="text-3xl font-bold">Algorithm Comparison</h1>
-    <nav>
-      <a href="index.html" class="mr-4">Home</a>
-      <a href="about.html" class="mr-4">About Algorithm</a>
-      <a href="results.html">Results</a>
-    </nav>
+  <header class="bg-gradient-to-br from-purple-600 to-blue-500 p-4 flex items-center justify-between">
+      <div class="text-white text-2xl font-bold">
+        <a href="index.html" class="text-white">ExponentiaSched</a>
+      </div>
+      <nav>
+          <ul class="flex space-x-4">
+              <li><a href="index.html" class="text-white hover:underline">Home</a></li>
+              <li><a href="about.html" class="text-white hover:underline">About</a></li>
+              <li><a href="results.html" class="text-white hover:underline">Results</a></li>
+          </ul>
+      </nav>
   </header>
 
   <main class="p-6 max-w-4xl mx-auto">
     <h2 class="text-2xl font-semibold mb-4">Comparison of Algorithms</h2>
-    <canvas id="comparisonChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+    
+    <h3>EAD Gantt Chart</h3>
+    <canvas id="eadGanttChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+    
+    <h3>FCFS Gantt Chart</h3>
+    <canvas id="fcfsGanttChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+    
+    <h3>SJF Gantt Chart</h3>
+    <canvas id="sjfGanttChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+    
+    <div id="comparisonMetrics" class="bg-gray-200 p-4 rounded-md"></div>
+
+    <h3 class="mt-6">Comparison Metrics Charts</h3>
+    <div class="chart-container">
+      <div class="chart">
+        <canvas id="avgTurnaroundChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="avgWaitingChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="throughputChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+      </div>
+    </div>
+
+    <h3 class="mt-6">Most Effective Scheduling Algorithm</h3>
+    <canvas id="effectivenessChart" class="bg-white shadow-md p-4 mb-6" width="400" height="400"></canvas>
   </main>
 
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800"></footer>
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.html" class="hover:underline">ExponentiaSched ™</a> . All Rights Reserved.</span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li><a href="./about.html" class="hover:underline me-4 md:me-6">About</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
   <script src="./js/scheduler.js"></script>
-  <script src="./js/comparison.js"></script>
+  <script src="./js/comparision.js"></script>
 </body>
 </html>

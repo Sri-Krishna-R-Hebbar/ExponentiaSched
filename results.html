@@ -5,30 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Results - EAD Scheduling</title>
   <link href="./css/output.css" rel="stylesheet">
-  <style>
-    #ganttChart {
-      width: 100%; /* Ensure it takes full width */
-      height: 200px; /* Set a fixed height */
-    }
-  </style>
+  <link href="./css/styles.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-900 text-white flex flex-col min-h-screen">
 
-  <header class="p-6 text-white text-center bg-gradient-to-br from-purple-600 to-blue-500">
-    <h1 class="text-3xl font-bold">EAD Scheduling Results</h1>
+  <header class="bg-gradient-to-br from-purple-600 to-blue-500 p-4 flex items-center justify-between">
+      <div class="text-white text-2xl font-bold">
+        <a href="index.html" class="text-white">ExponentiaSched</a>
+      </div>
+      <nav>
+          <ul class="flex space-x-4">
+              <li><a href="index.html" class="text-white hover:underline">Home</a></li>
+              <li><a href="about.html" class="text-white hover:underline">About</a></li>
+              <li><a href="comparision.html" class="text-white hover:underline">Comparison</a></li>
+          </ul>
+      </nav>
   </header>
 
   <main class="p-6 min-w-[600px] max-w-4xl mx-auto text-black flex-grow">
-
     <canvas id="ganttChart" class="bg-gray-200 shadow-md p-4 mb-10 rounded-md w-full" style="max-width: 1000px; height: 200px;"></canvas>
     <div id="metricsTable" class="text-left p-4 bg-gray-200 rounded-md"></div>
     <div id="solutionSteps" class="text-left p-4 bg-gray-200 rounded-md mt-6"></div>
+    <div class="flex justify-around mt-6">
+      <a href="input.html" class="relative inline-flex items-center justify-center p-0.5 mt-4 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          Input Again
+        </span>
+      </a>
+      <a href="comparision.html" class="relative inline-flex items-center justify-center p-0.5 mt-4 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          Check Comparison
+        </span>
+      </a>
+    </div>
   </main>
-
-  <script src="./js/scheduler.js"></script>
-  <script src="./js/ganttChart.js"></script>
-  <script src="./js/results.js"></script>
 
   <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
@@ -42,5 +53,8 @@
     </div>
   </footer>
 
+  <script src="./js/scheduler.js"></script>
+  <script src="./js/ganttChart.js"></script>
+  <script src="./js/results.js"></script>
 </body>
 </html>

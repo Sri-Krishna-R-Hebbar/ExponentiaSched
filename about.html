@@ -5,19 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - EAD Scheduling</title>
   <link href="./css/output.css" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
 
-  <header class="p-6 bg-blue-500 text-white text-center">
-    <h1 class="text-3xl font-bold">About EAD Scheduling Algorithm</h1>
+  <header class="bg-gradient-to-br from-purple-600 to-blue-500 p-4 flex items-center justify-between">
+      <div class="text-white text-2xl font-bold">
+        <a href="index.html" class="text-white">ExponentiaSched</a>
+      </div>
+      <nav>
+          <ul class="flex space-x-4">
+              <li><a href="index.html" class="text-white hover:underline">Home</a></li>
+              <li><a href="results.html" class="text-white hover:underline">Results</a></li>
+              <li><a href="comparision.html" class="text-white hover:underline">Comparison</a></li>
+          </ul>
+      </nav>
   </header>
 
-  <main class="p-6 max-w-2xl mx-auto">
-    <section>
-      <h2 class="text-xl font-semibold">Algorithm Explanation</h2>
-      <p class="mt-4">EAD Scheduling prioritizes processes using exponential aging...</p>
+  <main class="p-6 flex-grow bg-gray-900">
+    <section class="max-w-2xl mx-auto">
+        <h2 class="text-2xl font-semibold text-center">CPU SCHEDULING</h2>
+        <p class="mt-4">
+            CPU scheduling is a crucial aspect of operating systems that determines the order in which processes are executed by the CPU. Efficient CPU scheduling maximizes CPU utilization, minimizes response time, and ensures fairness among processes.
+        </p>
+        <p class="mt-4">
+            Key metrics in CPU scheduling include:
+        </p>
+        <ul class="mt-2 list-disc list-inside">
+            <li><strong>Throughput:</strong> The number of processes that complete their execution in a given time period. Higher throughput indicates better performance of the scheduling algorithm.</li>
+            <li><strong>Average Waiting Time:</strong> The average time that processes spend waiting in the ready queue before being executed. Lower average waiting time is desirable as it leads to faster process completion.</li>
+            <li><strong>Average Turnaround Time:</strong> The average time taken from the submission of a process to its completion. It includes the waiting time and the execution time. A lower average turnaround time indicates a more efficient scheduling algorithm.</li>
+        </ul>
+    </section>
+
+    <section class="mt-6 max-w-2xl mx-auto">
+        <h2 class="text-2xl font-semibold text-center">Scheduling Algorithms</h2>
+        <b><h3 class="mt-4">First-Come, First-Served (FCFS)</h3></b>
+        <p>
+            FCFS is the simplest CPU scheduling algorithm. In this method, processes are executed in the order they arrive in the ready queue. The first process to arrive is the first to be executed, hence the name. While FCFS is easy to implement, it can lead to the "convoy effect," where short processes wait for a long process to complete, resulting in increased average waiting time.
+        </p>
+
+        <b><h3 class="mt-4">Shortest Job First (SJF)</h3></b>
+        <p>
+            SJF scheduling selects the process with the smallest execution time next. This algorithm can be preemptive or non-preemptive. In the preemptive version, if a new process arrives with a shorter burst time than the currently running process, the CPU will switch to the new process. SJF minimizes average waiting time and is optimal in that it provides the shortest average turnaround time. However, it can lead to starvation for longer processes if shorter processes keep arriving.
+        </p>
+
+        <b><h3 class="mt-4">Exponential Aging Deadline (EAD) Scheduling</h3></b>
+          <p>
+              Exponential Aging Deadline (EAD) Scheduling is a dynamic priority scheduling algorithm that assigns priorities based on the deadlines of processes. The process with the earliest deadline is given the highest priority and is executed first. This method is particularly useful in real-time systems where meeting deadlines is critical.
+          </p>
+          <p>
+              In EAD, each process is assigned a deadline, and the scheduler continuously evaluates the processes in the ready queue. If a new process arrives with an earlier deadline than the currently running process, the scheduler may preempt the current process to execute the new one. This ensures that critical tasks are completed on time, but it can lead to increased complexity in managing process priorities and potential starvation for lower-priority processes.
+          </p>
+          <p>
+              The priority of each process can be calculated using the following formula:
+          </p><br>
+          <p class="font-bold text-center">
+              <strong>Priority = 1 / Deadline + e^(Waiting Time) </strong>
+          </p><br>
+          <p>
+              In this formula, the waiting time is the time a process has been waiting in the ready queue, and the deadline is the time by which the process must be completed. This exponential factor ensures that as the waiting time increases, the priority of the process also increases, reducing the risk of starvation for longer-waiting processes.
+          </p>
+          <p>
+              EAD is effective in environments where timing is crucial, such as embedded systems and multimedia applications, where delays can lead to significant issues.
+          </p>
     </section>
   </main>
+
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.html" class="hover:underline">ExponentiaSched™</a>. All Rights Reserved.</span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>
