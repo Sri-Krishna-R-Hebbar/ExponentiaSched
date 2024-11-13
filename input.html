@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input - EAD Scheduling</title>
+  <link href="./css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="p-6 bg-blue-500 text-white text-center">
+    <h1 class="text-3xl font-bold">Enter Process Details</h1>
+  </header>
+
+  <main class="p-6 max-w-md mx-auto">
+    <section id="numProcessSection">
+      <label class="block mb-4">
+        <span class="text-gray-700">Enter Number of Processes</span>
+        <input type="number" id="numProcesses" class="mt-1 block w-full" min="1" required>
+      </label>
+      <button id="generateFormButton" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">Generate Form</button>
+    </section>
+
+    <form id="processForm" class="hidden mt-6">
+      <div id="processInputs"></div>
+      <button type="submit" class="mt-4 w-full bg-blue-500 text-white py-2 rounded-md">Submit Processes</button>
+    </form>
+  </main>
+
+  <script src="./js/input.js"></script>
+</body>
+</html>
