@@ -6,20 +6,36 @@
   <title>Home - EAD Scheduling</title>
   <link href="./css/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-900 text-white bg-cover bg-center flex flex-col min-h-screen">
 
-  <header class="p-6 bg-blue-500 text-white text-center">
+  <header class="p-6 text-white text-center bg-gradient-to-br from-purple-600 to-blue-500">
     <h1 class="text-3xl font-bold">Exponential Aging Deadline Scheduling</h1>
     <p class="text-lg mt-2">A Dynamic CPU Scheduling Algorithm</p>
   </header>
 
-  <main class="p-6">
-    <section>
+  <main class="p-6 flex-grow">
+    <section class="text-center">
       <h2 class="text-2xl font-semibold">Introduction</h2>
       <p class="mt-4">Learn about our unique EAD scheduling algorithm and how it differs from traditional CPU scheduling methods.</p>
-      <a href="input.html" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md">Get Started</a>
+      <a href="input.html" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            Get Started
+        </span>
+      </a>
     </section>
   </main>
+
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>

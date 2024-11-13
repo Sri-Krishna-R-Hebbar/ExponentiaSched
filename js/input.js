@@ -11,7 +11,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       fieldset.classList.add('border', 'border-gray-300', 'p-4', 'mb-4', 'rounded-md');
 
       const processIdLabel = document.createElement('label');
-      processIdLabel.classList.add('block', 'text-gray-700');
+      processIdLabel.classList.add('block', 'text-white-700');
       processIdLabel.innerText = `Process ${i} ID:`;
       const processIdInput = document.createElement('input');
       processIdInput.type = 'text';
@@ -22,7 +22,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       fieldset.appendChild(processIdLabel);
 
       const burstTimeLabel = document.createElement('label');
-      burstTimeLabel.classList.add('block', 'text-gray-700', 'mt-2');
+      burstTimeLabel.classList.add('block', 'text-white-700', 'mt-2');
       burstTimeLabel.innerText = `Process ${i} Burst Time:`;
       const burstTimeInput = document.createElement('input');
       burstTimeInput.type = 'number';
@@ -34,7 +34,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       fieldset.appendChild(burstTimeLabel);
 
       const arrivalTimeLabel = document.createElement('label');
-      arrivalTimeLabel.classList.add('block', 'text-gray-700', 'mt-2');
+      arrivalTimeLabel.classList.add('block', 'text-white-700', 'mt-2');
       arrivalTimeLabel.innerText = `Process ${i} Arrival Time:`;
       const arrivalTimeInput = document.createElement('input');
       arrivalTimeInput.type = 'number';
@@ -46,7 +46,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       fieldset.appendChild(arrivalTimeLabel);
 
       const deadlineLabel = document.createElement('label');
-      deadlineLabel.classList.add('block', 'text-gray-700', 'mt-2');
+      deadlineLabel.classList.add('block', 'text-white-700', 'mt-2');
       deadlineLabel.innerText = `Process ${i} Deadline:`;
       const deadlineInput = document.createElement('input');
       deadlineInput.type = 'number';

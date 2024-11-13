@@ -7,19 +7,34 @@
   <link href="./css/output.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
 
-  <header class="p-6 bg-blue-500 text-white text-center">
+  <header class="p-6 text-white text-center bg-gradient-to-br from-purple-600 to-blue-500">
     <h1 class="text-3xl font-bold">EAD Scheduling Results</h1>
   </header>
 
-  <main class="p-6 max-w-4xl mx-auto">
-    <canvas id="ganttChart" class="bg-white shadow-md p-4 mb-6"></canvas>
+  <main class="p-6 min-w-[600px] max-w-4xl mx-auto text-black flex-grow">
+
+    <canvas id="ganttChart" class="bg-gray-200 shadow-md p-4 mb-10 rounded-md w-[90%]"></canvas>
+
     <div id="metricsTable" class="text-left p-4 bg-gray-200 rounded-md"></div>
   </main>
 
   <script src="./js/scheduler.js"></script>
   <script src="./js/ganttChart.js"></script>
   <script src="./js/results.js"></script>
+
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="index.html" class="hover:underline">ExponentiaSched™</a>. All Rights Reserved.</span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li><a href="#" class="hover:underline me-4 md:me-6">About</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline me-4 md:me-6">Licensing</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 </html>
