@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Results - EAD Scheduling</title>
   <link href="./css/output.css" rel="stylesheet">
+  <style>
+    #ganttChart {
+      width: 100%; /* Ensure it takes full width */
+      height: 200px; /* Set a fixed height */
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-900 text-white flex flex-col min-h-screen">
@@ -15,9 +21,9 @@
 
   <main class="p-6 min-w-[600px] max-w-4xl mx-auto text-black flex-grow">
 
-    <canvas id="ganttChart" class="bg-gray-200 shadow-md p-4 mb-10 rounded-md w-[90%]"></canvas>
-
+    <canvas id="ganttChart" class="bg-gray-200 shadow-md p-4 mb-10 rounded-md w-full" style="max-width: 1000px; height: 200px;"></canvas>
     <div id="metricsTable" class="text-left p-4 bg-gray-200 rounded-md"></div>
+    <div id="solutionSteps" class="text-left p-4 bg-gray-200 rounded-md mt-6"></div>
   </main>
 
   <script src="./js/scheduler.js"></script>

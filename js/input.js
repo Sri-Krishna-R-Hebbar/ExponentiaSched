@@ -17,6 +17,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       processIdInput.type = 'text';
       processIdInput.name = `processId_${i}`;
       processIdInput.classList.add('mt-1', 'block', 'w-full');
+      processIdInput.style.color = 'black'; 
       processIdInput.required = true;
       processIdLabel.appendChild(processIdInput);
       fieldset.appendChild(processIdLabel);
@@ -28,6 +29,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       burstTimeInput.type = 'number';
       burstTimeInput.name = `burstTime_${i}`;
       burstTimeInput.classList.add('mt-1', 'block', 'w-full');
+      burstTimeInput.style.color = 'black'; 
       burstTimeInput.required = true;
       burstTimeInput.min = 1;
       burstTimeLabel.appendChild(burstTimeInput);
@@ -40,6 +42,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       arrivalTimeInput.type = 'number';
       arrivalTimeInput.name = `arrivalTime_${i}`;
       arrivalTimeInput.classList.add('mt-1', 'block', 'w-full');
+      arrivalTimeInput.style.color = 'black'; 
       arrivalTimeInput.required = true;
       arrivalTimeInput.min = 0;
       arrivalTimeLabel.appendChild(arrivalTimeInput);
@@ -52,6 +55,7 @@ document.getElementById('generateFormButton').addEventListener('click', function
       deadlineInput.type = 'number';
       deadlineInput.name = `deadline_${i}`;
       deadlineInput.classList.add('mt-1', 'block', 'w-full');
+      deadlineInput.style.color = 'black'; 
       deadlineInput.required = true;
       deadlineInput.min = 1;
       deadlineLabel.appendChild(deadlineInput);
